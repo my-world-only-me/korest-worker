@@ -1,0 +1,16 @@
+name = "korest"
+main = "src/index.js"
+compatibility_date = "2025-04-01"
+compatibility_flags = ["nodejs_compat"]
+
+# D1 database binding
+[[d1_databases]]
+binding = "DB"
+database_name = "korest"
+database_id = ""  # ⚠️ 自行替换: npx wrangler d1 create korest
+
+# Environment variables (equivalent to KoRest env vars)
+[vars]
+LOG_INCOMING_REQUESTS = "true"
+KOREST_APP_NAME = "KoRest"
+KOREST_APP_TAGLINE = "Self-hosted KOReader sync server for Readest (Cloudflare Workers)"

@@ -1,0 +1,17 @@
+{
+    "name": "korest-worker",
+    "version": "1.0.0",
+    "description": "KoRest — KOReader sync server for Cloudflare Workers + D1",
+    "main": "src/index.js",
+    "scripts": {
+        "dev": "wrangler dev",
+        "deploy": "wrangler deploy",
+        "migrate": "wrangler d1 migrations apply korest",
+        "create-db": "wrangler d1 create korest",
+        "list-tables": "wrangler d1 execute korest --command \".tables\""
+    },
+    "dependencies": {},
+    "devDependencies": {
+        "wrangler": "^4.0.0"
+    }
+}
